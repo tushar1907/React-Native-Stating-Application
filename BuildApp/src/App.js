@@ -6,7 +6,7 @@ import Weather from './components/Weather';
 
 export default class App extends React.Component {
   state = {
-    isLoading: true
+    isLoading: false
   };
 
   render() {
