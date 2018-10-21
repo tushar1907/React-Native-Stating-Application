@@ -1,15 +1,23 @@
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Animated } from 'react-native';
 
 export default class App extends React.Component {
-
   state = {
-    isLoading: "Tushar"
+    isLoading: true
   };
+
   render() {
+    const { isLoading } = this.state;
     return (
       <View style={styles.container}>
-        <Text>{this.state.isLoading} Gupta is my name</Text>
+        {isLoading ? (
+          <Text>Fetching The Weather</Text>
+        ) : (
+          <View>
+            <Text>Minimalist Weather App</Text>
+          </View>
+        )}
       </View>
     );
   }
